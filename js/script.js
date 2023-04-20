@@ -23,6 +23,7 @@ createApp({
             nuovoPunto: '',
         }
         dati.nuovoPunto = this.nuovoPunto;
+        console.log(this.nuovoPunto);
         //non su usa il push perché non si salverebbe poi nel json
         //per far sì che il tutto si salvi anche nel json faremo la seguente operazione
         axios.post('./server.php', dati, {headers: {'Content-Type': 'multipart/form-data'}}).then(response => {
