@@ -8,6 +8,10 @@ createApp({
   },
 
   methods: {
-    
+    pescaPunti() {
+        axios.get('./server.php').then(response => {
+            console.log(response.data);
+        });
+    }
   }
 }).mount('#app')
