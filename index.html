@@ -13,12 +13,12 @@
 <body>
     <h1 class="text-center pt-5">Cose da fare</h1>
     <div id="app">
-        <div class="todo-cnt w-25 m-auto text-center">
+        <div class="todo-cnt w-25 m-auto">
             <!-- <h1>{{prova}}</h1> -->
             <ul>
 
-                <li>
-
+                <li v-for = "punto in punti">
+                    {{punto}}
                 </li>
 
             </ul>
@@ -27,9 +27,9 @@
 
         <hr>
 
-        <div class="d-flex justify-content-center" method="POST">
+        <div class="d-flex justify-content-center">
             <input v-model="nuovoPunto" name="nuovoPunto" type="text" placeholder="aggiungi punto">
-            <button type="submit" class="ms-3">conferma</button>
+            <button type="submit" class="ms-3" @click="mettiPunto()">conferma</button>
         </div>
     </div>
     <script src="js/script.js"></script>
