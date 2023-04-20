@@ -8,6 +8,6 @@ createApp({
   },
 
   methods: {
-
+    
   }
 }).mount('#app')
