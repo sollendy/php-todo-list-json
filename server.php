@@ -4,7 +4,7 @@ if(isset($_POST['nuovoPunto'])) {
     //speriamo che così vada bene adesso dobbiamo lavorare sul json prendendolo innanzitutto
     $listaJSON = file_get_contents('agenda.json');
     $puntiLista = json_decode($listaJSON);
-    $puntilista[] = $_POST['nuovoPunto'];
+    $puntiLista[] = $_POST['nuovoPunto'];
     $nuovoPuntoJSON = json_encode($puntiLista);
     file_put_contents('agenda.json', $nuovoPuntoJSON);
     var_dump($puntiLista);
